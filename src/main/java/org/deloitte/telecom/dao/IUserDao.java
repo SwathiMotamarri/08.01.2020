@@ -16,4 +16,6 @@ public interface IUserDao {
     MobileUser findByMobileNo(String mobileNo);
 
     List<MobileUser> fetchUsers(int blockSize);
+
+	MobileUser RechargeAmount(String mobileNo, double amount);
 }

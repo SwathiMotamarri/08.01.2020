@@ -58,6 +58,12 @@ public class UserServiceImpl implements IUserService {
         return users;
     }
 
+	@Override
+	public MobileUser RechargeAmount(String mobileNo, double amount) {
+		// TODO Auto-generated method stub
+		return userDao.RechargeAmount(mobileNo, amount);
+	}
+
     /*
     @PostConstruct
     public void init(){

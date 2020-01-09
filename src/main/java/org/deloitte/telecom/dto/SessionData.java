@@ -20,4 +20,13 @@ SessionData {
         return user;
     }
 
+    private MobileUser balance;
+
+	public MobileUser getBalance() {
+		return balance;
+	}
+
+	public void setBalance(MobileUser balance) {
+		this.balance = balance;
+	}
 }

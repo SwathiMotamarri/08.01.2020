@@ -4,65 +4,78 @@
 
 <!DOCTYPE html>
 <html>
-<HEAD>
-<title>Telecom</title>
-<style>
-form {text-align: center}
-div {text-align: center}
-body {text-align: center}
-</style>
-</HEAD>
-
-<body >
-
-<div style="background-image: url('C:\Users\admin\Desktop\img.jpg')">
-
-<form method="get" action="processregister" style= "position: center; max-width: 300px; padding: 500px; background-color: #33E6FF">
-  <h1>TELECOM MOBILE-USER REGISTRATION FORM</h1><br/>
-
-  <span class="input"></span>
-  <input type="text" name="name" placeholder="Enter Name"/>
-  <br>
-  <span id="password"></span>
-  <input type="password" name="password" id="password" placeholder="Enter Password">
-	<br>
-	<span class="input"></span>
-  <input type="text" name="mobileNo" placeholder="Enter Mobile number" required />
-  <br>
-  	<span class="input"></span>
-  <input type="number" name="balance" placeholder="Enter Initial Balance" required />
-  <br>
-  <button type="submit" value="Sign Up" title="Submit form" class="icon-arrow-right" style= "background-color= #7AFF33">
-  <span>Register</span></button>
-	<br>
-</form>
+<head>
+ <style>
+        body {
+          background-image: url('https://wallpaperstream.com/wallpapers/full/white/Grid-Hexagonal-White-HD-Wallpaper.jpg');
+        }
+        </style>
+        <style>
+            form { 
+              display: block;
+                
+              margin-top: 0em;
+              margin-left: 36em;
+              margin-right: 36em;
+              margin-bottom: 0em;
+                  
+                 
+                 
+                  box-sizing: border-box;
+                  text-align: center;
+              
+              background-color: grey;
+                padding: 5px ;
+                border: 1px solid grey ;
+                position:fixed;
+                
+                
+            }
+            </style>
+            <style> 
+                input[type=submit] {
+                  width: 30%;
+                  padding: 10px 10px;
+                  margin: 8px 0;
+                  box-sizing: border-box;
+                  border: none;
+                  background-color: #3CBC8D;
+                  color: white;
+                }
+ </style>
+ </head>
+<body style= "background-color:white">
+  <div class="text">  
+<h2 style="text-align:center;"> TELECOM MOBILE-USER REGISTRATION FORM</h2>
+</div>
+<form method="get" action="processregister">
+ 
+<div class="input">
+<span style="text-align:center;">Name </span>
+<input name="name" type="text" />
+</div>
+<div class="input">
+<span style="text-align:center;">Password</span>
+<input name="password" type="password" />
+</div>
+</div>
+<div class="input">
+<span style="text-align:center;">Mobile Number</span>
+<input name="mobileNo" type="text" />
+</div>
+</div>
+<div class="input">
+<span style="text-align:center;">Balance</span>
+<input name="balance" type="number" />
 </div>
 
-</body>
-</html>
-
-
-
-<%--
-<div>
-<span>Name </span>
-<input name="name" placeholder="Enter name" type="text" />
-</div>
-<div>
-<span>Password </span>
-<input name="password" placeholder="Enter Password" type="password" />
-</div>
-<div>
-<span>Mobile number </span>
-<input name="mobileNo" placeholder="Enter Mobile number" type="text" />
-</div>
-
-<div>
-<span>Balance </span>
-<input name="balance" placeholder="Enter Initial Balance" type="number" />
-</div>
-<div>
+<div class="input">
 <input type="submit" value="Submit"/>
 </div>
 </form>
---%>
+
+<div>
+
+<c:out value="${message}"/>
+</body>
+</html>

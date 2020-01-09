@@ -4,7 +4,12 @@
 
 <!DOCTYPE html>
 <html>
-
+<head>
+<style>
+        body {
+          background-image: url('https://wallpaperstream.com/wallpapers/full/white/Grid-Hexagonal-White-HD-Wallpaper.jpg');
+        }
+        </style></head>
 <body>
 <h1>Error Page </h1>
 <h3>

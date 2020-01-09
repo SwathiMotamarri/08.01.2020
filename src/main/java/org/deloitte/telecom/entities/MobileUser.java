@@ -56,7 +56,16 @@ public class MobileUser {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-    public MobileUser(){
+	private double amount;
+    public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public MobileUser(){
 
     }
 

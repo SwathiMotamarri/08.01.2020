@@ -17,4 +17,6 @@ public interface IUserService {
     MobileUser findByMobileNo(String mobileNo);
 
     List<MobileUser> fetchUsers(int blockSize);
+
+	MobileUser RechargeAmount(String mobileNo, double amount);
 }

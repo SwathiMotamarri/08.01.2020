@@ -80,7 +80,17 @@ public class UserDaoImpl implements IUserDao {
     	MobileUser user = findByMobileNo(mobileNo);
         return user != null;
     }
-
+    
+    @Override
+    public MobileUser RechargeAmount(String mobileNo, double amount)
+    {
+    	MobileUser a= findByMobileNo(mobileNo);
+    			double bal=a.getBalance();
+    			bal=bal+amount;
+    			a.setBalance(bal);
+    			return a;    			
+    }
+    
     @Override
     public MobileUser save(MobileUser user) {
         System.out.println("inside save,user=" + user);
@@ -92,4 +102,5 @@ public class UserDaoImpl implements IUserDao {
         user = getEntityManager().merge(user);
         return user;
     }
+    
 }

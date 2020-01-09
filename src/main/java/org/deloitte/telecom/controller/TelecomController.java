@@ -51,7 +51,7 @@ public class TelecomController {
                                    @RequestParam("password") String password) {
         boolean correct = service.checkCredentialsByMobileNo(mobileNo, password);
         if (!correct) {
-            return new RedirectView("/userinput?message=incorrectcredentials");
+            return new RedirectView("/userinput?message=INCORRECT-CREDENTIALS");
         }
         MobileUser user = service.findByMobileNo(mobileNo);
         sessionData.setUser(user);
@@ -89,6 +89,24 @@ public class TelecomController {
 
     }
 
+    @GetMapping("/recharge")
+    
+   public ModelAndView doRecharge() 
+    {
+    	return new ModelAndView("/recharge");
+    }
+  
+    @GetMapping("/processrecharge")
+    public RedirectView processrecharge(@RequestParam("mobileNo") String mobileNo,
+										@RequestParam("amount") double amount)	
+    {
+    	System.out.println("inside recharge page");
+    	MobileUser user=service.RechargeAmount(mobileNo,amount);
+    		sessionData.setUser(user);
+    	return new RedirectView("/home");
+    	}
+    	
+    
     @GetMapping("/signout")
     public RedirectView signout() {
         sessionData.setUser(null);
